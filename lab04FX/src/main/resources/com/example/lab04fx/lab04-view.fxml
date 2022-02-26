@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.DatePicker?>
+<HBox alignment="TOP_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.lab04fx.FXController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <VBox spacing="8">
+        <Label text="Username:"/>
+        <Label text="Password:"/>
+        <Label text="Full Name:"/>
+        <Label text="E-mail:"/>
+        <Label text="Phone #:"/>
+        <Label text="Date of Birth:"/>
+    </VBox>
+
+    <VBox>
+        <TextField fx:id="usernameTF"/>
+        <PasswordField fx:id="passwordField"/>
+        <TextField fx:id="fullNameTF"/>
+        <TextField fx:id="emailTF"/>
+        <TextField fx:id="phoneTF"/>
+        <DatePicker fx:id="dobTF"/>
+        <Button text="Register" fx:id="registerButton" onAction="#onRegisterButtonClick"/>
+    </VBox>
+
+</HBox>
