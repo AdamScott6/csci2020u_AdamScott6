@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.lab08.Lab08Controller">
+    <MenuBar>
+        <Menu>
+            <text>File</text>
+            <MenuItem text="New" onAction="#New"/>
+            <MenuItem text="Open" onAction="#Open"/>
+            <MenuItem text="Save" onAction="#Save"/>
+            <MenuItem text="Save As" onAction="#SaveAs"/>
+            <MenuItem text="Exit" onAction="#Exit"/>
+        </Menu>
+    </MenuBar>
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="studentID" text="SID">
+                <cellValueFactory><PropertyValueFactory property="studentID" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="assignments" text="Assignments">
+                <cellValueFactory><PropertyValueFactory property="assignments" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="midterm" text="Midterm">
+                <cellValueFactory><PropertyValueFactory property="midterm" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="finalExam" text="Final Exam">
+                <cellValueFactory><PropertyValueFactory property="finalExam" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="finalMark" text="Final Mark">
+                <cellValueFactory><PropertyValueFactory property="finalMark" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="letterGrade" text="Letter Grade">
+                <cellValueFactory><PropertyValueFactory property="letterGrade" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+
+    </TableView>
+
+    <HBox>
+        <VBox spacing="20" alignment="TOP_LEFT">
+            <padding><Insets  top="12" right="0" bottom="8" left="8"/></padding>
+
+            <Label text="SID:"/>
+            <Label text="Midterm:"/>
+
+        </VBox>
+        <VBox spacing="12" alignment="TOP_LEFT">
+            <padding><Insets  top="12" right="0" bottom="8" left="8"/></padding>
+            <TextField fx:id="SIDTextfield" promptText="SID" prefWidth="200" prefHeight="25"/>
+            <TextField fx:id="midtermTextfield" promptText="Midterm/100" prefWidth="200" prefHeight="25"></TextField>
+        </VBox>
+        <VBox spacing="20" alignment="TOP_LEFT">
+            <padding><Insets  top="12" right="0" bottom="8" left="20"/></padding>
+            <Label text="Assignments:"/>
+            <Label text="Final Exam:"/>
+        </VBox>
+        <VBox spacing="12" alignment="TOP_LEFT">
+            <padding><Insets  top="12" right="0" bottom="8" left="8"/></padding>
+            <TextField fx:id="assignmentsTextfield" promptText="Assignments/100" prefWidth="200" prefHeight="25"/>
+            <TextField fx:id="examTextfield" promptText="Final Exam/100" prefWidth="200" prefHeight="25"/>
+        </VBox>
+        <VBox alignment="CENTER_RIGHT" prefWidth="100">
+            <Button text="Add" onAction="#Add"/>
+        </VBox>
+    </HBox>
+
+</VBox>
